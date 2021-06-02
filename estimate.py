@@ -2,7 +2,7 @@ import math
 import unittest
 import random
 def wallis(n):
-        p=1.00
+        p=2.00
         for i in range(1,n+1):
             p*=(4*i*i)/(4*i*i-1)
         return p
@@ -16,7 +16,7 @@ def monte_carlo(n):
                 c+=1
             else:
                 s+=1
-        p=4*c/s
+        p=4*c/n
         return p
 class TestWallis(unittest.TestCase):
     
