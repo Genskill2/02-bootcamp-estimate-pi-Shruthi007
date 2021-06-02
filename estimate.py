@@ -11,7 +11,11 @@ class TestWallis(unittest.TestCase):
         for i in range(500, 600):
             pi = wallis(i)
             self.assertTrue(abs(pi - math.pi) < 0.01, msg=f"Estimate with even {i} iterations is {pi} which is not accurate enough.\n")
-
+    def wallis(n):
+        p=1.00
+        for i in range(1,n+1):
+            p*=(4*i*i)/(4*i*i-1)
+        return p
 
 class TestMC(unittest.TestCase):
     def test_randomness(self):
